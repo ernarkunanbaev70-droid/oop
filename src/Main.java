@@ -1,17 +1,16 @@
 public class Main {
     public static void main(String[] args) {
 
-        ClothingItem cloth = new ClothingItem(10, "Jacket", 12000.0, 6);
-        Customer buyer = new Customer(5, "Yernar", 40000.0, 0);
+        ClothingItem cloth = new ClothingItem(1, "Jacket", 12000, 6);
+        Customer buyer = new Customer(1, "Yernar", 40000, 0);
 
-        int pieces = 1;
-        double payment = cloth.getPrice();
-        payment = payment * pieces;
+        Sale sale = new Sale(1, cloth, 2);
 
-        cloth.plusQuantity(-pieces);
-        buyer.spend(payment);
+        cloth.plusQuantity(-2);
+        buyer.spend(sale.getTotal());
 
-        System.out.println("amount to pay: " + payment);
-        System.out.println("purchase completed");
+        System.out.println(cloth);
+        System.out.println(buyer);
+        System.out.println(sale);
     }
 }
