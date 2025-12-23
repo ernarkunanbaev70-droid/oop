@@ -14,7 +14,7 @@ public class Main {
         cloth.plusQuantity(-sale.getCount());
         buyer.spend(sale.getTotal());
 
-        System.out.println("\nAfter sale:");
+        System.out.println("After sale:");
         System.out.println("Item quantity: " + cloth.getQuantity());
         System.out.println("Customer cash: " + buyer.getCash());
         System.out.println("Total paid: " + sale.getTotal());
