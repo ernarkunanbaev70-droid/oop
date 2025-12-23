@@ -12,11 +12,22 @@ public class ClothingItem {
         this.quantity = quantity;
     }
 
-    public double getPrice() {
-        return price;
-    }
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public double getPrice() { return price; }
+    public int getQuantity() { return quantity; }
 
-    public void plusQuantity(int x) {
-        quantity += x;
+    public void setId(int id) { this.id = id; }
+    public void setName(String name) { this.name = name; }
+    public void setPrice(double price) { this.price = price; }
+    public void setQuantity(int quantity) { this.quantity = quantity; }
+
+    public void plusQuantity(int x) { quantity += x; }
+    public boolean isInStock() { return quantity > 0; }
+
+    @Override
+    public String toString() {
+        return "ClothingItem{id=" + id + ", name=" + name +
+               ", price=" + price + ", quantity=" + quantity + "}";
     }
 }
